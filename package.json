@@ -26,5 +26,9 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "nodemon": "^2.0.20"
-  }
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm":"8.3.1"
+    }
 }
