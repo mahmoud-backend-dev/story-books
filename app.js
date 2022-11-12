@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 // const mongoose = require('mongoose');
+const MONGO_URL = "mongodb+srv://mh15721812:15721812@cluster0.owthrxo.mongodb.net/storybooks?retryWrites=true&w=majority"
 const helmet = require("helmet");
 const connectDB = require('./config/db');
 const morgan = require('morgan');
@@ -62,7 +63,7 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
-    store:MongoStore.create({mongoUrl:process.env.MONGO_URL})
+    store:MongoStore.create({mongoUrl:MONGO_URL}) //process.env.MONGO_URL
 }))
 
 // Passport middleware 
