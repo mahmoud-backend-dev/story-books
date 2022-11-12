@@ -1,8 +1,8 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 //const mongoose = require('mongoose');
 const User = require('../models/User');
-const GOOGLE_CLIENT_ID = "473334495668-bh8b4rgfp8huo10a6oj9v6g6o8sjk0jk.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET ="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"
+const GOOGLE_CLIENT_ID = "473334495668-1uk8ala1849657qajvigdlv7c9k1fp67.apps.googleusercontent.com";
+const GOOGLE_CLIENT_SECRET ="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"
 module.exports = (passport) => {
     passport.use(new GoogleStrategy({
         clientID: GOOGLE_CLIENT_ID, // process.env.GOOGLE_CLIENT_ID
