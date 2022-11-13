@@ -4,6 +4,14 @@ const User = require('../models/User');
 const GOOGLE_CLIENT_ID = "473334495668-1uk8ala1849657qajvigdlv7c9k1fp67.apps.googleusercontent.com";
 const GOOGLE_CLIENT_SECRET ="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"
 module.exports = (passport) => {
+    passport.serializeUser((user, cb) => {
+        cb(null, user.id)
+    });
+    passport.deserializeUser((id, cb) => {
+        User.findById(id, (err, user) => {
+            cb(err, user);
+        });
+    });
     passport.use(new GoogleStrategy({
         clientID: GOOGLE_CLIENT_ID, // process.env.GOOGLE_CLIENT_ID
         clientSecret: GOOGLE_CLIENT_SECRET , //process.env.GOOGLE_CLIENT_SECRET
@@ -31,12 +39,5 @@ module.exports = (passport) => {
             }
         }
     ))
-    passport.serializeUser((user, cb) => {
-        cb(null, user.id)
-    });
-    passport.deserializeUser((id, cb) => {
-        User.findById(id, (err, user) => {
-            cb(err, user);
-        });
-    });
+
 }
