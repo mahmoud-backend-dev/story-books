@@ -8,7 +8,6 @@ module.exports = (passport) => {
         clientID: GOOGLE_CLIENT_ID, // process.env.GOOGLE_CLIENT_ID
         clientSecret: GOOGLE_CLIENT_SECRET , //process.env.GOOGLE_CLIENT_SECRET
         callbackURL: 'https://storybooks-me1812.herokuapp.com/auth/google/callback',
-        passReqToCallback: true,
         scope: ['profile', 'email']
     },
         async (accessToken, refreshToken, profile, cb) => {
