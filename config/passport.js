@@ -5,7 +5,7 @@ const GOOGLE_CLIENT_ID = "473334495668-1uk8ala1849657qajvigdlv7c9k1fp67.apps.goo
 const GOOGLE_CLIENT_SECRET ="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"
 module.exports = (passport) => {
     passport.serializeUser((user, cb) => {
-        cb(null, user.id)
+        cb(null, user._id)
     });
     passport.deserializeUser((id, cb) => {
         User.findById(id, (err, user) => {
