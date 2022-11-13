@@ -1,5 +1,5 @@
 const express = require('express');
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 // const mongoose = require('mongoose');
 const MONGO_URL = "mongodb+srv://mh15721812:15721812@cluster0.owthrxo.mongodb.net/storybooks?retryWrites=true&w=majority"
 //const helmet = require("helmet");
@@ -15,7 +15,7 @@ const engine = exphbs.engine;
 //const cros = require('cros');
 
 // Load Config
-dotenv.config({ path: './config/config.env' });
+//dotenv.config({ path: './config/config.env' });
 
 // Passport congig
 require('./config/passport')(passport);
@@ -53,9 +53,10 @@ app.use(methodOverride( (req, res)=> {
 }))
 
 // Logging 
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
-}
+// if (process.env.NODE_ENV === 'development') {
+//     app.use(morgan('dev'));
+// }
+
 // handlebars helpers
 const { formatDate, truncate, editIcon, stripTags,select } = require('./helpers/hbs');
 
