@@ -12,8 +12,11 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const exphbs = require('express-handlebars');
 const engine = exphbs.engine;
-
-
+const cros = require('cros');
+const options = {
+    "origin": "*",
+    "methods": "*"
+};
 // Load Config
 dotenv.config({ path: './config/config.env' });
 
@@ -25,6 +28,8 @@ connectDB();
 
 const app = express();
 
+
+app.use(cros(options));
 // app.use(helmet()); 
 // Body parser 
 app.use(express.urlencoded({ extended: true }));
