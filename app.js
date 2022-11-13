@@ -79,12 +79,12 @@ app.use(session({
 }))
 
 // Passport middleware 
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize())
+app.use(passport.session())
 
 // Set global var
 app.use((req, res, next) => {
-    res.locals.user = req.user || null;
+    res.locals.user = req.user || null
     next()
 })
 
