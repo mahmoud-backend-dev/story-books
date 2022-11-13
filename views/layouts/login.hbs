@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="CDtU3aXc6oh5GPN3cfuOPAxemNI5w66TSjwwSlQw1GU" />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="473334495668-1uk8ala1849657qajvigdlv7c9k1fp67.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +21,12 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function onSignIn(googleUser) {
+            let id_token = googleUser.getAuthResponse().id_token;
+            console.log(id_token)
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
