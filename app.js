@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 // const mongoose = require('mongoose');
 const MONGO_URL = "mongodb+srv://mh15721812:15721812@cluster0.owthrxo.mongodb.net/storybooks?retryWrites=true&w=majority"
-const helmet = require("helmet");
+//const helmet = require("helmet");
 const connectDB = require('./config/db');
 const morgan = require('morgan');
 const path = require('path');
@@ -25,7 +25,7 @@ connectDB();
 
 const app = express();
 
-app.use(helmet()); 
+// app.use(helmet()); 
 // Body parser 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
