@@ -6,6 +6,7 @@ const Story = require('../models/Storys');
 // @desc Login/Landing page
 // @route GET /
 router.get('/', ensureGuest, (req, res) => {
+    req.session.destroy();
     res.render('login', {
         layout: 'login'
     });
