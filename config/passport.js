@@ -1,12 +1,10 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 //const mongoose = require('mongoose');
 const User = require('../models/User');
-const GOOGLE_CLIENT_ID = "473334495668-1uk8ala1849657qajvigdlv7c9k1fp67.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET ="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"
 module.exports = (passport) => {
     passport.use(new GoogleStrategy({
-        clientID: GOOGLE_CLIENT_ID, // process.env.GOOGLE_CLIENT_ID
-        clientSecret: GOOGLE_CLIENT_SECRET , //process.env.GOOGLE_CLIENT_SECRET
+        clientID: process.env.GOOGLE_CLIENT_ID, // GOOGLE_CLIENT_ID
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET , // GOOGLE_CLIENT_SECRET
         callbackURL: 'https://storybooks-me1812.herokuapp.com/auth/google/callback',
         scope: ['profile']
     },
