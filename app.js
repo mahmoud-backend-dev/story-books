@@ -96,7 +96,7 @@ app.use('/stories', require('./routes/stories'));
 // Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const PORT = process.env.PORT || 1812
+const PORT = process.env.PORT || 1812;
 app.listen(PORT,
-    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT} `)
+    console.log(`Server running in http://localhost:${PORT} `)
 )
