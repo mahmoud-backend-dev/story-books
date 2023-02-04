@@ -5,7 +5,7 @@ module.exports = (passport) => {
     passport.use(new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID, // GOOGLE_CLIENT_ID
         clientSecret: process.env.GOOGLE_CLIENT_SECRET , // GOOGLE_CLIENT_SECRET
-        //callbackURL: 'http://localhost:1812/auth/google/callback',
+        callbackURL: 'https://story-books-1812.onrender.com/auth/google/callback',
         scope: ['profile']
     },
         async (accessToken, refreshToken, profile, cb) => {
