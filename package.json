@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "cross-env NODE_ENV=development nodemon app"
+    "dev": "nodemon app.js"
   },
   "author": "Mahmoud Hamdy",
   "license": "MIT",
