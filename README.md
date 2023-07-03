@@ -18,7 +18,10 @@ their public and private stories. They can update, add, or remove their stories.
 - Express
 - Node.JS
 - Javascript
+- Passport
+- Passport Google Oauth20
 - Integrating Google Platform to  Sign-In With Gmail Account
+- Handlerbars
 
 ### To Install all the dependencies
 
