@@ -16,7 +16,7 @@ const engine = exphbs.engine;
 // Load Config
 dotenv.config({ path: './config/config.env' });
 
-// Passport congig
+// Passport config
 require('./config/passport')(passport);
 
 
